@@ -406,10 +406,12 @@ ul {
   border-radius: 4px;
 }
 
-.client-page:hover {
+.client-page:hover,
+.client-page:focus {
   border: 1px solid var(--accent-color);
 }
-.client-icon:hover {
+.client-icon:hover,
+.client-icon:focus {
   fill: var(--accent-color);
 }
 
