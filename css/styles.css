@@ -154,7 +154,7 @@ color: var(--accent-color);
   background-color: var(--secondary-background-color);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .hero .container {
@@ -356,10 +356,11 @@ ul {
 }
 
 .btn-social {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
-  padding: 12px;
   background-color: var(--logo-part-color);
   border-radius: 50%;
 }
@@ -393,11 +394,13 @@ ul {
 }
 
 .client-page {
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
   width: 168px;
   height: 88px;
-  padding: 16px 32px;
+  /* padding: 16px 32px; */
   border: 1px solid var(--custumer-logo-color);
   border-radius: 4px;
 }
@@ -412,7 +415,6 @@ ul {
 
 .client-page:hover,
 .client-page:focus {
-  display: block;
   border: 1px solid var(--accent-color);
 }
 .client-page:hover .client-icon,
@@ -470,18 +472,21 @@ footer {
 .social-list {
   display: flex;
   margin: 0;
-  width: 208px;
   text-align: center;
-  justify-content: space-between;
   list-style: none;
 }
 
+.social-item:not(:last-child) {
+  margin-right: 16px;
+}
+
 .foot-link-back {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  padding: 8px;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -492,7 +497,7 @@ footer {
 
 .foot-info {
   display: flex;
-  /* align-items: baseline; */
+  align-items: baseline;
 }
 
 /* Portfolio */
@@ -562,12 +567,6 @@ img {
   width: calc((100% - (24px * 2))/3);
 }
 
-.chapter .galary:hover,
-.chapter .galary:focus {
-  display: block;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
 .cards-nav .chapter:nth-child(3n) {
   margin-right: 0;
 }
@@ -584,17 +583,18 @@ img {
   border-top: none;
 }
 
-/* img {
-  margin: 0;
-} */
-
 /* Portfolio's galary */
 
 .galary {
-  margin: 0;
+  display: block;
   color: var(--main-text-color);
   
   text-decoration-line: none;
+}
+
+.chapter .galary:hover,
+.chapter .galary:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 /* Visually hidden */
